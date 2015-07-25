@@ -1,0 +1,89 @@
+<div id="gamescarousel" style="width: 720px;">
+
+  <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+        background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+    </div>
+    <div style="position: absolute; display: block; background: url(..img/loading.gif) no-repeat 50% 50%;
+        top: 0px; left: 0px;width: 100%;height:100%;">
+    </div>
+</div>
+
+  <div id="gameslides" u="slides" style="overflow: hidden;  position:absolute;">
+  <% for(var i = 0; i < games.length; i++) { %>
+    <% var filename = games[i].replace(/[^A-Z0-9]/ig, ""); %>
+        <div class="item" data-gamename="<%= games[i] %>">
+
+          <img u="image" src="img/games/<%= filename %>.jpg">
+          <img u="thumb" src="img/games/<%= filename %>.jpg">
+          <div class="headergamename"><%= games[i] %></div>
+        </div>
+  <% } %>
+  </div>
+
+  <div u="thumbnavigator" class="jssort07" id="thumbnavigator" style=" left: 0px; top: 50px;">
+      <!-- Thumbnail Item Skin Begin -->
+      <div u="slides" style="cursor: default;">
+          <div u="prototype" class="p">
+              <div u="thumbnailtemplate" class="i"></div>
+              <div class="o"></div>
+          </div>
+      </div>
+      <!-- Thumbnail Item Skin End -->
+      <!--#region Arrow Navigator Skin Begin -->
+      <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
+      <style>
+          /* jssor slider arrow navigator skin 11 css */
+          /*
+          .jssora11l                  (normal)
+          .jssora11r                  (normal)
+          .jssora11l:hover            (normal mouseover)
+          .jssora11r:hover            (normal mouseover)
+          .jssora11l.jssora11ldn      (mousedown)
+          .jssora11r.jssora11rdn      (mousedown)
+          */
+          .jssora11l, .jssora11r {
+              display: block;
+              position: absolute;
+              /* size of arrow element */
+              width: 37px;
+              height: 37px;
+              cursor: pointer;
+              background: url(../img/a11.png) no-repeat;
+              overflow: hidden;
+          }
+
+          .jssora11l {
+              background-position: -11px -41px;
+          }
+
+          .jssora11r {
+              background-position: -71px -41px;
+          }
+
+          .jssora11l:hover {
+              background-position: -131px -41px;
+          }
+
+          .jssora11r:hover {
+              background-position: -191px -41px;
+          }
+
+          .jssora11l.jssora11ldn {
+              background-position: -251px -41px;
+          }
+
+          .jssora11r.jssora11rdn {
+              background-position: -311px -41px;
+          }
+      </style>
+      <!-- Arrow Left -->
+      <span u="arrowleft" class="jssora11l" style="top: 123px; left: 8px;;">
+      </span>
+      <!-- Arrow Right -->
+      <span u="arrowright" class="jssora11r" style="top: 123px; right: 8px;">
+      </span>
+      <!--#endregion Arrow Navigator Skin End -->
+  </div>
+
+</div>

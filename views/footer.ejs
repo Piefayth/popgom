@@ -1,0 +1,10 @@
+<div class="navbar-fixed-bottom minifooter" id="footerpane">
+
+  <%if (!auth) { %>
+    <% include loginform %>
+  <% } %>
+  <%if (auth) { %>
+    <% include homebar %>
+  <% } %>
+
+</div>

@@ -1,0 +1,38 @@
+<div class="row homebar" id="homebar">
+<div class="col-md-2 usermenu dropup">
+  <button class="btn btn-default dropdown-toggle" type="button" id="usermenubutton" data-toggle="dropdown">
+    <strong class="glyphicon glyphicon-user iconpad"> </strong> <strong><%= username %></strong>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="signoutelement">Sign Out</a></li>
+  </ul>
+</div>
+<div class="col-md-1 footertext text-left footerbubble">
+  <i class="glyphicon glyphicon-send iconpad"></i> <strong> 200 </strong>
+</div>
+<div class="col-md-1 footertext text-left footerbubble" data-toggle="tooltip" data-placement="top" title data-original-title="Briefcases">
+  <i class="glyphicon glyphicon-briefcase iconpad"></i> <strong> 500 </strong>
+</div>
+<div class="col-md-6">
+</div>
+<div class="col-md-2 usermenu friendmenu dropup text-right">
+  <button class="btn btn-default dropdown-toggle friendmenubutton" type="button" id="friendmenubutton">
+    <strong class="glyphicon glyphicon-plus iconpad friendmenubutton"> </strong> <strong class="friendmenubutton">Add Friend</strong>
+  </button>
+  <ul class="dropdown-menu friendmenubutton" role="menu">
+    <li class="friendmenubutton" role="presentation">
+      <a class="friendmenubutton" role="menuitem" tabindex="-1" href="#" id="signoutelement">
+
+          <form method="post" action="" id="addfriendform">
+            <div class="input-group form-search">
+          <input class="form-control search-query friendmenubutton friendtextbox" id="addfriendtextbox" name="friendusername" placeholder="Friend's Username?">
+          <span class="input-group-btn">
+            <button type-"submit" class="btn btn-primary" id="addfriendbutton">Add</button>
+          </span>
+          </div>
+        </form>
+
+      </a>
+    </li>
+  </ul>
+</div>
